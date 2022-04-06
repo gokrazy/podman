@@ -5,8 +5,8 @@ build of podman.
 
 ### Usage
 
-Add `github.com/gokrazy/iptables` and `github.com/gokrazy/podman` to your
-`gokr-packer` command.
+Add `github.com/gokrazy/iptables`, `github.com/gokrazy/nsenter` and
+`github.com/gokrazy/podman` to your `gokr-packer` command.
 
 Login to your gokrazy device using
 [breakglass](https://github.com/gokrazy/breakglass).
@@ -33,8 +33,5 @@ mount --bind /perm/docker-storage /var
 #### Run a container
 
 ```
-touch nsenter
-chmod +x nsenter
-
 podman run --rm -ti debian:sid
 ```
