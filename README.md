@@ -26,8 +26,8 @@ If your container data should be saved to disk, bind-mount a directory from your
 permanent partition onto `/var`:
 
 ```
-mkdir /perm/docker-storage
-mount --bind /perm/docker-storage /var
+mkdir /perm/container-storage
+mount --bind /perm/container-storage /var
 ```
 
 #### Run a container
