@@ -18,6 +18,7 @@ across reboots, it is faster to work in RAM:
 
 ```
 mount -t tmpfs tmpfs /var
+mkdir -p /var/tmp
 ```
 
 #### Option 2: store containers on disk
@@ -28,6 +29,7 @@ permanent partition onto `/var`:
 ```
 mkdir /perm/container-storage
 mount --bind /perm/container-storage /var
+mkdir -p /var/tmp
 ```
 
 #### Run a container
