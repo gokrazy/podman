@@ -32,6 +32,9 @@ mount --bind /perm/container-storage /var
 
 #### Run a container
 
+To have `podman` easily be able to find other binaries like `nsenter` and `iptables` simply add `/user` and `/usr/local/bin` to `PATH` before running `podman`.
+
 ```
+export PATH=$PATH:/user:/usr/local/bin
 podman run --rm -ti debian:sid
 ```
