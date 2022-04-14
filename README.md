@@ -33,5 +33,5 @@ mount --bind /perm/container-storage /var
 #### Run a container
 
 ```
-podman run --rm -ti debian:sid
+podman run --rm -ti docker.io/library/debian:sid
 ```
