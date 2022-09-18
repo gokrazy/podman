@@ -5,8 +5,15 @@ build of podman.
 
 ### Usage
 
-Add `github.com/gokrazy/iptables`, `github.com/gokrazy/nsenter` and
-`github.com/gokrazy/podman` to your `gokr-packer` command.
+Add the following packages to your `gokr-packer` command:
+
+```
+github.com/gokrazy/iptables \
+github.com/gokrazy/nsenter \
+github.com/gokrazy/podman \
+github.com/greenpau/cni-plugins/cmd/cni-nftables-portmap \
+github.com/greenpau/cni-plugins/cmd/cni-nftables-firewall
+```
 
 Login to your gokrazy device using
 [breakglass](https://github.com/gokrazy/breakglass).
