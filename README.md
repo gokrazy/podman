@@ -5,17 +5,11 @@ build of podman.
 
 ### Usage
 
-Add the following packages to your `gokr-packer` command:
+Please see [gokrazy → Available packages → Docker
+containers](https://gokrazy.org/packages/docker-containers/) for instructions on
+how to use this repository.
 
-```
-github.com/gokrazy/iptables \
-github.com/gokrazy/nsenter \
-github.com/gokrazy/podman \
-github.com/greenpau/cni-plugins/cmd/cni-nftables-portmap \
-github.com/greenpau/cni-plugins/cmd/cni-nftables-firewall
-```
-
-Login to your gokrazy device using
+The sections below assume you are logged into to your gokrazy device using
 [breakglass](https://github.com/gokrazy/breakglass).
 
 #### Option 1: store containers in RAM
