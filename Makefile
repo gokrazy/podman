@@ -2,7 +2,7 @@ all: _gokrazy/extrafiles_arm64.tar _gokrazy/extrafiles_amd64.tar
 
 _gokrazy/extrafiles_amd64.tar:
 	mkdir -p _gokrazy/extrafiles_amd64
-	curl -fsSL https://github.com/mgoltzsche/podman-static/releases/latest/download/podman-linux-amd64.tar.gz | \
+	curl -fsSL https://github.com/mgoltzsche/podman-static/releases/download/v4.9.5/podman-linux-amd64.tar.gz | \
 		tar xzv --strip-components=1 -C _gokrazy/extrafiles_amd64/ --exclude README.md
 	cd _gokrazy/extrafiles_amd64 && \
 		wget https://raw.githubusercontent.com/greenpau/cni-plugins/main/assets/net.d/87-podman-bridge.conflist -O etc/cni/net.d/87-podman-bridge.conflist && \
@@ -13,7 +13,7 @@ _gokrazy/extrafiles_amd64.tar:
 
 _gokrazy/extrafiles_arm64.tar:
 	mkdir -p _gokrazy/extrafiles_arm64
-	curl -fsSL https://github.com/mgoltzsche/podman-static/releases/latest/download/podman-linux-arm64.tar.gz | \
+	curl -fsSL https://github.com/mgoltzsche/podman-static/releases/download/v4.9.5/podman-linux-arm64.tar.gz | \
 		tar xzv --strip-components=1 -C _gokrazy/extrafiles_arm64/ --exclude README.md
 	cd _gokrazy/extrafiles_arm64 && \
 		wget https://raw.githubusercontent.com/greenpau/cni-plugins/main/assets/net.d/87-podman-bridge.conflist -O etc/cni/net.d/87-podman-bridge.conflist && \
