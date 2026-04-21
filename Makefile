@@ -9,6 +9,7 @@ _gokrazy/extrafiles_amd64.tar:
 		wget https://raw.githubusercontent.com/greenpau/cni-plugins/main/assets/net.d/87-podman-bridge.conflist -O etc/cni/net.d/87-podman-bridge.conflist && \
 		ln -s /user/cni-nftables-firewall usr/local/lib/cni/cni-nftables-firewall && \
 		ln -s /user/cni-nftables-portmap usr/local/lib/cni/cni-nftables-portmap && \
+		printf '\n[network]\nfirewall_driver = "nftables"\n' >> etc/containers/containers.conf && \
 		tar cf ../extrafiles_amd64.tar *
 	rm -rf _gokrazy/extrafiles_amd64
 
@@ -21,6 +22,7 @@ _gokrazy/extrafiles_arm64.tar:
 		wget https://raw.githubusercontent.com/greenpau/cni-plugins/main/assets/net.d/87-podman-bridge.conflist -O etc/cni/net.d/87-podman-bridge.conflist && \
 		ln -s /user/cni-nftables-firewall usr/local/lib/cni/cni-nftables-firewall && \
 		ln -s /user/cni-nftables-portmap usr/local/lib/cni/cni-nftables-portmap && \
+		printf '\n[network]\nfirewall_driver = "nftables"\n' >> etc/containers/containers.conf && \
 		tar cf ../extrafiles_arm64.tar *
 	rm -rf _gokrazy/extrafiles_arm64
 

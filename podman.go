@@ -85,6 +85,12 @@ func main() {
 		log.Fatal(err)
 	}
 
+	// netavark invokes nft and pipes rules via /dev/stdin, which doesn't
+	// exist on gokrazy's minimal /dev.
+	if _, err := os.Lstat("/dev/stdin"); os.IsNotExist(err) {
+		os.Symlink("/proc/self/fd/0", "/dev/stdin")
+	}
+
 	if err := syscall.Exec("/usr/local/bin/podman", os.Args, os.Environ()); err != nil {
 		log.Fatal(err)
 	}
